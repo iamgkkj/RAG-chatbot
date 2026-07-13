@@ -17,6 +17,16 @@ Scan the QR code below to quickly open the live application on your mobile devic
 
 ---
 
+### 💻 Desktop View
+
+Here is a look at the live RAG Chatbot interface in action:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/iamgkkj/RAG-chatbot/8449fdecc867a751adc60c3423e7866421ac0db9/static/dashboard.png" alt="RAG Chatbot Dashboard Screenshot" width="700">
+</p>
+
+---
+
 ## Key Features
 
 * **Paced Ingestion Pipeline:** Self-throttling ingestion mechanism with automated backoff logic to safely stay within free-tier API Rate Limits (RPM).
