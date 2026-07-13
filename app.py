@@ -10,11 +10,117 @@ DB_PATH = ".chroma_db"
 
 st.set_page_config(page_title="RAG Document Assistant", page_icon="🤖", layout="centered")
 
-# Visual layout adjustments
+# Visual layout adjustments with colorful minimal design and blurred background
 st.markdown("""
     <style>
-        .block-container { padding-top: 3rem; }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .stApp {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 50%, rgba(240, 147, 251, 0.3) 100%);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        
+        /* Blurred background image overlay */
+        .stApp::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/static/alfa.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(8px);
+            opacity: 0.6;
+            z-index: -1;
+        }
+        
+        .block-container {
+            padding-top: 3rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+            margin: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
         footer { visibility: hidden; }
+        
+        /* Colorful chat message styling */
+        .stChatMessage {
+            border-radius: 15px;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stChatMessage[data-testid="stChatMessage-assistant"] {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        
+        .stChatMessage[data-testid="stChatMessage-user"] {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        
+        /* Colorful title styling */
+        h1 {
+            color: #667eea;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Colorful caption styling */
+        .stCaption {
+            color: #764ba2;
+            font-weight: 500;
+        }
+        
+        /* Colorful input styling */
+        .stTextInput > div > div > input {
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+        }
+        
+        .stTextInput > div > div > input:focus {
+            border-color: #764ba2;
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Colorful button styling */
+        .stButton > button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .stButton > button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
     </style>
 """, unsafe_allow_html=True)
 
