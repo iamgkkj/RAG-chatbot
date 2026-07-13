@@ -20,10 +20,7 @@ st.markdown("""
         }
         
         .stApp {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 50%, rgba(240, 147, 251, 0.3) 100%);
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: #1a1a2e;
             min-height: 100vh;
         }
         
@@ -39,21 +36,21 @@ st.markdown("""
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            filter: blur(8px);
-            opacity: 0.6;
+            filter: blur(6px);
+            opacity: 0.85;
             z-index: -1;
         }
         
         .block-container {
             padding-top: 3rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             margin: 1rem;
             padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
         
         footer { visibility: hidden; }
@@ -63,42 +60,43 @@ st.markdown("""
             border-radius: 15px;
             padding: 1rem;
             margin: 0.5rem 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
         
         .stChatMessage[data-testid="stChatMessage-assistant"] {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
         
         .stChatMessage[data-testid="stChatMessage-user"] {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
         }
         
-        /* Colorful title styling */
+        /* Title styling with better visibility */
         h1 {
-            color: #667eea;
+            color: #2d3748;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.2);
+            text-shadow: none;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        /* Colorful caption styling */
+        /* Caption styling with better visibility */
         .stCaption {
-            color: #764ba2;
+            color: #4a5568;
             font-weight: 500;
         }
         
-        /* Colorful input styling */
+        /* Input styling with better visibility */
         .stTextInput > div > div > input {
             border: 2px solid #667eea;
             border-radius: 25px;
-            background: rgba(255, 255, 255, 0.95);
-            color: #333;
+            background: rgba(255, 255, 255, 1);
+            color: #1a202c;
+            font-weight: 500;
         }
         
         .stTextInput > div > div > input:focus {
@@ -106,7 +104,7 @@ st.markdown("""
             box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
         }
         
-        /* Colorful button styling */
+        /* Button styling */
         .stButton > button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -120,6 +118,11 @@ st.markdown("""
         .stButton > button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Ensure all text is readable */
+        p, span, div {
+            color: #2d3748;
         }
     </style>
 """, unsafe_allow_html=True)
