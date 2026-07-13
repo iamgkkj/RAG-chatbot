@@ -7,6 +7,16 @@ A clean, production-grade Retrieval-Augmented Generation (RAG) chatbot designed 
 
 ---
 
+### 📱 Access on Mobile
+
+Scan the QR code below to quickly open the live application on your mobile device:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/iamgkkj/RAG-chatbot/0123d50840af3207fb764d752a7c72cec908cf56/static/qr.png" alt="Live App QR Code" width="200">
+</p>
+
+---
+
 ## Key Features
 
 * **Paced Ingestion Pipeline:** Self-throttling ingestion mechanism with automated backoff logic to safely stay within free-tier API Rate Limits (RPM).
