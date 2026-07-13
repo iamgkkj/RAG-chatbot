@@ -75,19 +75,21 @@ st.markdown("""
         
         /* Title styling with better visibility */
         h1 {
-            color: #2d3748;
+            color: #ffffff;
             font-weight: 700;
-            text-shadow: none;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
         
         /* Caption styling with better visibility */
         .stCaption {
-            color: #4a5568;
+            color: #e2e8f0;
             font-weight: 500;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         }
         
         /* Input styling with better visibility */
